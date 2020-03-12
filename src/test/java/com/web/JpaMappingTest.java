@@ -6,6 +6,8 @@ import com.web.domain.enums.BoardType;
 import com.web.repository.BoardRepository;
 import com.web.repository.UserRepository;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +54,7 @@ public class JpaMappingTest {
         );
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void 제대로_생성했는지_테스트() {
         User user = userRepository.findByEmail(email);
         assertThat(user.getName(), is("havi"));
